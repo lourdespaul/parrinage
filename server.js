@@ -65,7 +65,14 @@ app.post('/register', (req, res)=>{
         if(err) res.send(err);
         if(result) res.send(result);
     });
-})
+});
+
+app.get('/student/:id', (req, res)=>{
+    Student.findById(req.params.id,(err, result)=>{
+        res.send(result);
+    });
+});
+
 
 app.listen(8080, ()=>{
     console.log('The server is up')

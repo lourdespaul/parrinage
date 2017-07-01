@@ -69,7 +69,7 @@ app.post('/register', (req, res)=>{
 
 app.get('/student/:id', (req, res)=>{
     Student.findById(req.params.id,(err, result)=>{
-        res.send(result);
+        res.render('student', {profile:result});
     });
 });
 

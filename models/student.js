@@ -8,6 +8,7 @@ const studentSchema = new mongoose.Schema({
     mother: String,
     institution: String,
     qualification: String,
+    image: String,
     hostel: String,
     sponsor: String,
     reports: [{type: mongoose.Schema.Types.ObjectId, ref:'report'}]

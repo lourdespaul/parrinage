@@ -14,6 +14,7 @@
     "express": "^4.15.3",
     "hbs": "^4.0.1",
     "materialize-css": "^0.99.0",
+    "moment": "^2.18.1",
     "mongoose": "^4.11.0",
     "path": "^0.12.7"
   }

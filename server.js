@@ -3,6 +3,8 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const hbs = require('hbs');
 const path = require('path');
+const moment = require('moment');
+
 const app = express();
 
 const Student = require('./models/student');
@@ -20,6 +22,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, './node_modules/materialize-css/dist')));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
+
+hbs.registerHelper('formatTime', function (date, format) {
+    var mmnt = moment(date);
+    return mmnt.format(format);
+});
 
 app.get('/',(req, res)=>{
     res.redirect('/1')

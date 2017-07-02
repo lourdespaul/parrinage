@@ -1,14 +1,59 @@
 <div class="row">
     <div class="col s12">
       <ul class="tabs">
-        <li class="tab col s6"><a href="#test1">Profile</a></li>
-        <li class="tab col s6"><a class="active" href="#test2">Report</a></li>
+        <li class="tab col s6"><a class="active" href="#test1">Profile</a></li>
+        <li class="tab col s6"><a  href="#test2">Report</a></li>
       </ul>
     </div>
     <div id="test1" class="col s12">
-      <table>
-        
-      </table>
+    <div class="section">
+      <div class="container">
+        <div class="container">
+          <table>
+            <tbody>
+              <tr>
+                <td>Name</td>
+                <td>{{profile.name}}</td>
+              </tr>
+              <tr>
+                <td>Sponsor</td>
+                <td>{{profile.sponsor}}</td>
+              </tr>
+              <tr>
+                <td>Date of Birth</td>
+                <td>{{profile.dob}}</td>
+              </tr>
+              <tr>
+                <td>Address</td>
+                <td>{{profile.address}}</td>
+              </tr>
+              <tr>
+                <td>Father's name</td>
+                <td>{{profile.father}}</td>
+              </tr>
+              <tr>
+                <td>Mother's Name</td>
+                <td>{{profile.mother}}</td>
+              </tr>
+              <tr>
+                <td>Qualification</td>
+                <td>{{profile.qualification}}</td>
+              </tr>
+              <tr>
+                <td>Institution</td>
+                <td>{{profile.institution}}</td>
+              </tr>
+              {{#if profile.hostel}}
+              <tr>
+                <td>Hostel</td>
+                <td>{{profile.hostel}}</td>
+              </tr>
+              {{/if}}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
     </div>
     <div id="test2" class="col s12">
 

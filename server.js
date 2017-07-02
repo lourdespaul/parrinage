@@ -67,6 +67,7 @@ app.post('/register', (req, res)=>{
         institution: data.institution.trim(),
         qualification: data.qualification.trim(),
         sponsor: data.sponsor.trim(),
+        image: data.image.trim()
     });
     student.save((err,result)=>{
         if(err) res.send(err);

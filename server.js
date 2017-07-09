@@ -65,6 +65,7 @@ app.post('/register', (req, res)=>{
         father: data.father.trim(),
         mother: data.mother.trim(),
         institution: data.institution.trim(),
+        ins_address: data.ins_address.trim(),
         qualification: data.qualification.trim(),
         sponsor: data.sponsor.trim(),
         image: data.image.trim()

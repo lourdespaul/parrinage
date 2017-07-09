@@ -61,6 +61,7 @@ app.post('/register', (req, res)=>{
     let student = new Student({
         name: data.name.trim(),
         dob: data.dob.trim(),
+        hostel: data.hostel.trim(),
         address: data.address.trim(),
         father: data.father.trim(),
         mother: data.mother.trim(),

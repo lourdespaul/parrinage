@@ -60,19 +60,19 @@ app.post('/register', (req, res)=>{
     const data = req.body;
     let student = new Student({
         name: data.name.trim(),
-        dob: data.dob.trim(),
-        hostel: data.hostel.trim(),
-        address: data.address.trim(),
-        father: data.father.trim(),
-        mother: data.mother.trim(),
-        institution: data.institution.trim(),
-        ins_address: data.ins_address.trim(),
-        qualification: data.qualification.trim(),
-        sponsor: data.sponsor.trim(),
-        image: data.image.trim(),
-        orphan: data.orphan.trim(),
-        gender: data.gender.trim(),
-        occupation: data.occupation.trim(),
+        dob: data.dob? data.dob.trim():null,
+        hostel: data.hostel? data.hostel.trim():null,
+        address: data.address? data.address.trim():null,
+        father: data.father? data.father.trim():null,
+        mother: data.mother? data.mother.trim():null,
+        institution: data.institution? data.institution.trim():null,
+        ins_address: data.ins_address? data.ins_address.trim():null,
+        qualification: data.qualification? data.qualification.trim():null,
+        sponsor: data.sponsor? data.sponsor.trim():null,
+        image: data.image? data.image.trim():null,
+        orphan: data.orphan? data.orphan.trim():null,
+        gender: data.gender? data.gender.trim():null,
+        occupation: data.occupation? data.occupation.trim():null,
     });
     student.save((err,result)=>{
         if(err) res.send(err);

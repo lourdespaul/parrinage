@@ -10,9 +10,11 @@ const studentSchema = new mongoose.Schema({
     ins_address: String,
     qualification: String,
     oprhan: String,
+    occupation: String,
     image: String,
     hostel: String,
     sponsor: String,
+    gender: String,
     reports: [{type: mongoose.Schema.Types.ObjectId, ref:'report'}]
 });
 

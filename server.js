@@ -44,7 +44,7 @@ app.get('/:page',(req, res)=>{
                 for (let i =1; i<=parseInt(count / perPage)+1; i++){
                     pages.push({page:i.toString(),active: (i == page+1)?true:false})
                 }
-                let prePage = (page == 0)? false: page-1;
+                let prePage = (page == 0)? false: page;
                 let postPage = (page == parseInt(count/perPage))? false: page+1
                 res.render('home',{
                     students: students,

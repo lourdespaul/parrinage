@@ -36,6 +36,7 @@ app.get('/:page',(req, res)=>{
     const perPage = 20;
     let page = req.params.page - 1;
     Student.find({})
+        .sort("name")
         .limit(perPage)
         .skip(perPage * page)
         .exec(function(err, students) {

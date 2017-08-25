@@ -82,7 +82,7 @@ app.post('/register', (req, res)=>{
 });
 
 app.get('/remove/:id',(req, res)=>{
-    Student.findByIdAndRemove(id, (err,result)=>{
+    Student.findByIdAndRemove(req.params.id, (err,result)=>{
         res.send(result);
     })
 });

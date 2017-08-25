@@ -7,6 +7,7 @@
                     <th>Name</th>
                     <th>Sponsor</th>
                     <th>View</th>
+                    <th>Remove</th>
                 </tr>
                 </thead>
 
@@ -16,6 +17,7 @@
                     <td>{{name}}</td>
                     <td>{{sponsor}}</td>
                     <td><a href="/student/{{_id}}"<i class="material-icons large">open_in_browser</i></a></td>
+                    <td><a href="/remove/{{_id}}"<i class="material-icons large">delete</i></a></td>                    
                 </tr>
                 {{/each}}
 

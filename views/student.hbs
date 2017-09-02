@@ -29,7 +29,7 @@
               </tr>
               <tr>
                 <td>Date of Birth</td>
-                <td>{{formatTime profile.dob "DD-MM-YYYY"}}</td>
+                <td>{{profile.dob}}</td>
               </tr>
               <tr>
                 <td>Address</td>
@@ -61,6 +61,12 @@
                 <td>{{profile.hostel}}</td>
               </tr>
               {{/if}}
+              {{#if profile.left}}
+              <tr>
+                <td>Left</td>
+                <td>{{left}}</td>
+              </tr>
+              {{/if}}
             </tbody>
           </table>
         </div>
@@ -68,7 +74,7 @@
     </div>
     </div>
     <div id="test2" class="col s12">
-
+      
     </div>
     {{!--<div id="test3" class="col s12">Test 3</div>
     <div id="test4" class="col s12">Test 4</div>--}}

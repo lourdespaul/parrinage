@@ -1,3 +1,4 @@
+
 <div class="col s12">
     <div class="section">
         <div class="container">
@@ -6,18 +7,19 @@
                 <tr>
                     <th>Name</th>
                     <th>Sponsor</th>
+                    <th>Completed</th>
                     <th>View</th>
-                    <th>Remove</th>
+                    {{!-- <th>Remove</th> --}}
                 </tr>
                 </thead>
-
                 <tbody>
                 {{#each students}}
                 <tr>
                     <td>{{name}}</td>
                     <td>{{sponsor}}</td>
+                    <td>{{left}}</td>
                     <td><a href="/student/{{_id}}"<i class="material-icons large">open_in_browser</i></a></td>
-                    <td><a href="/remove/{{_id}}"<i class="material-icons large">delete</i></a></td>                    
+                    {{!-- <td><a href="/remove/{{_id}}"<i class="material-icons large">delete</i></a></td>                     --}}
                 </tr>
                 {{/each}}
 

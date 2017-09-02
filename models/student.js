@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const studentSchema = new mongoose.Schema({
     name: String,
-    dob: Date,
+    dob: String,
     address: String,
     father: String,
     mother: String,
@@ -15,6 +15,7 @@ const studentSchema = new mongoose.Schema({
     hostel: String,
     sponsor: String,
     gender: String,
+    left: String,
     reports: [{type: mongoose.Schema.Types.ObjectId, ref:'report'}]
 });
 

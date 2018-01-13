@@ -39,6 +39,13 @@ app.get("/", (req, res) => {
   res.redirect("/1");
 });
 
+app.get("/students", (req, res) => {
+  Student.find({}, (err, data) => {
+    console.log(data);
+    res.send(data);
+  });
+});
+
 app.get("/:page", (req, res) => {
   const perPage = 20;
   let page = req.params.page - 1;
@@ -147,13 +154,6 @@ app.get("/search/:query", (req, res) => {
 app.get("/student/:id", (req, res) => {
   Student.findById(req.params.id, (err, result) => {
     res.render("student", { profile: result });
-  });
-});
-
-app.get("/students/", (req, res) => {
-  Student.find({}, (err, data) => {
-    console.log(data);
-    res.send(data);
   });
 });
 

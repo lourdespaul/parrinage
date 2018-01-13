@@ -150,8 +150,9 @@ app.get("/student/:id", (req, res) => {
   });
 });
 
-app.get("/getall", (req, res) => {
+app.get("/students/", (req, res) => {
   Student.find({}, (err, data) => {
+    console.log(data);
     res.send(data);
   });
 });

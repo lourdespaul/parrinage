@@ -150,6 +150,6 @@ app.get("/student/:id", (req, res) => {
   });
 });
 
-app.listen(8080, () => {
+app.listen(80, () => {
   console.log("The server is up");
 });

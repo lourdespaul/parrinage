@@ -150,6 +150,12 @@ app.get("/student/:id", (req, res) => {
   });
 });
 
+app.get("/getall", (req, res) => {
+  Student.find({}, (err, data) => {
+    res.send(data);
+  });
+});
+
 app.listen(80, () => {
   console.log("The server is up");
 });
